@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');  */
+
+:root {
+  --bg-clr: linear-gradient(
+    to bottom,
+    hsl(247, 24%, 41%) 30%,
+    hsl(255, 15%, 50%)
+  );
+  --btn-bg-clr: #f2536d;
+  --text-clr: #ffffff;
+  --text-clr-light: #cccccc;
+  --sun-clr: hsl(37, 72%, 59%);
+  --font-family: "Roboto", "Poppins", sans-serif;
+  --font-size: clamp(0.95rem);
+  --font-size-large: clamp(3.6rem, 5vw, 8rem);
+  --font-weight: 400;
+}
+
+* {
+  /* css resets */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+body {
+  background: #0e0e0e;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  min-width: 412px;
+  margin: 0 auto;
+  background-image: var(--bg-clr);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-clr-light);
+  position: relative;
+}
+.sun {
+  position: absolute;
+  right: 7rem;
+  top: 1.5rem;
+
+  background: var(--sun-clr);
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--sun-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 2px hsl(356, 13%, 56%);
+  position: absolute;
+}
+.weather > * {
+  margin: 0.6rem auto;
+  font-weight: 400;
+}
+
+.weather .bold {
+  font-size: var(--font-size);
+  font-weight: 500;
+  color: var(--text-clr);
+}
+
+.weather__temp {
+  font-size: var(--font-size-large);
+  color: var(--text-clr);
+  font-weight: 700;
+}
+
+.weather .weather__temp span {
+  font-weight: 200;
+}
+
+.weather__cord {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  font-family: var(--font-family);
+  padding: 0.4rem 0.7rem;
+  background: var(--btn-bg-clr);
+  font-size: var(--font-size);
+  font-weight: 400;
+  color: var(--text-clr);
+  letter-spacing: 0.7px;
+  border-radius: 0.4rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1) translateY(-0.2rem);
+}
+
+.btn:active {
+  transform: scale(1) translateY(0);
+}

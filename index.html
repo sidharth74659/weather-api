@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- https://static.collectui.com/shots/2427892/weather-large -->
+    <main class="container">
+      <div class="weather">
+        <div class="sun"></div>
+        <!-- https://openweathermap.org/current#zip -->
+        <div class="weather__temp"><span class="data">20</span><span>&deg</span></div>
+        <div class="weather__description bold"></div>
+        <!-- <div class="weather__country">toronto, canada</div> -->
+        <div class="weather__cord">
+          <div class="weather__cord__lat bold"><span class="data">43.70</span>&deg LAT </div>
+          <div class="weather__cord__lon bold"><span class="data">79.40</span>&deg lon </div>
+        </div>
+        <button class="btn" onclick="loadApi()">Random</button>
+      </div>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
