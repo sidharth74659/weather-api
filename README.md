@@ -1,1 +1,2 @@
 # weather-api
+config.js
